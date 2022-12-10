@@ -4,5 +4,23 @@
     ViewData["Title"] = "Weather Forecast";
 }
 <h1>@ViewData["Title"]</h1>
+<h1>@ViewData["clienttoken"]</h1>
+<h1>@ViewData["username"] </h1>
 
+@if(User.Identity.IsAuthenticated)
+{
+    <p>
+        @User.Identity.Name
+    </p>
+}
 <p>Use this page to detail your sites Weather Forecast.</p>
+@{
+    @* foreach(var item in Model)
+    {
+        Console.WriteLine(item._date);
+        Console.WriteLine(item._temperatureC);
+        Console.WriteLine(item._temperatureF);
+        Console.WriteLine(item._summary);
+    }    *@
+}
+
